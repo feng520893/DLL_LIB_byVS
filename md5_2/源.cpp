@@ -1,4 +1,5 @@
 #include "../md5/md5.h"
+#include <stdio.h>
 
 #if !dynamic_link
 //#pragma comment(lib,"md5.lib")
@@ -28,7 +29,7 @@ int main(int agr,char* agv[])
 	if(agr<2)
 	{
 		char str[10240];
-		while(gets(str))
+		while(scanf("%s",str)==1)
 			puts(getStrMd5(md5,str));
 	}else
 	{
